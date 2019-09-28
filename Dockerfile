@@ -2,5 +2,5 @@
 #ADD site /srv/jekyll
 
 FROM scratch
-COPY hello /
+#COPY hello /
 CMD ["/hello"]
