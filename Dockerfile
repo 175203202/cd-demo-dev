@@ -1,6 +1,4 @@
-#FROM jekyll/jekyll:3.2.1
-#ADD site /srv/jekyll
-
-FROM centos:6.7
-#COPY hello /
-CMD [echo "/hello"]
+FROM node:6.14.2
+EXPOSE 8080
+COPY server.js .
+CMD node server.js
