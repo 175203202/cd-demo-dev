@@ -17,5 +17,5 @@ spec:
           #image: gcr.io/google-samples/node-hello:1.0
           image: 34.216.36.61/library/boetest:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               protocol: TCP
