@@ -15,7 +15,7 @@ spec:
       containers:
         - name: boetest
           #image: gcr.io/google-samples/node-hello:1.0
-          image: ec2-34-216-36-61.us-west-2.compute.amazonaws.com/library/boetest:latest
+          image: 34.216.36.61/library/boetest:latest
           ports:
             - containerPort: 8080
               protocol: TCP
