@@ -20,4 +20,4 @@ spec:
             - containerPort: 80
               protocol: TCP
       imagePullSecrets:
-        - name: registry-harbor
+        - name: registry-secret
