@@ -2,15 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: boetest
+  namespace: dev
 spec:
   selector:
     matchLabels:
-      run: load-balancer-example
+      run: boetest-dev
   replicas: 2
   template:
     metadata:
       labels:
-        run: load-balancer-example
+        run: boetest-dev
     spec:
       containers:
         - name: boetest
