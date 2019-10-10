@@ -16,6 +16,7 @@ spec:
         - name: boetest
           #image: gcr.io/google-samples/node-hello:1.0
           image: ip-172-31-21-219.us-west-2.compute.internal/library/boetest
+          command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
           ports:
             - containerPort: 80
               protocol: TCP
