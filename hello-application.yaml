@@ -18,6 +18,13 @@ spec:
           #image: gcr.io/google-samples/node-hello:1.0
           image: ip-172-31-21-219.us-west-2.compute.internal/library/boetest
           command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "300m"
+            limits:
+              memory: "2Gi"
+              cpu: "300m"
           ports:
             - containerPort: 80
               protocol: TCP
