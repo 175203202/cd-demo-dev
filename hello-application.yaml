@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boetest-dev
+  name: terminus-dev
   namespace: dev
 spec:
   selector:
     matchLabels:
-      run: boetest-dev
-  replicas: 2
+      run: terminus-dev
+  replicas: 1
   template:
     metadata:
       labels:
-        run: boetest-dev
+        run: terminus-dev
     spec:
       containers:
-        - name: boetest
+        - name: terminustest
           #image: gcr.io/google-samples/node-hello:1.0
-          image: ip-172-31-0-64.us-west-2.compute.internal/library/boetest
+          image: ip-172-31-30-252.us-west-2.compute.internal/library/terminus
           command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
           resources:
             requests:
-              memory: "2Gi"
+              memory: "1Gi"
               cpu: "300m"
             limits:
-              memory: "2Gi"
+              memory: "1Gi"
               cpu: "300m"
           ports:
             - containerPort: 80
